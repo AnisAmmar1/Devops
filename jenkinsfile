@@ -1,1 +1,14 @@
+pipeline {
+    agent any
 
+    stages {
+        stage('Checkout') {
+            steps {
+                // Étape pour récupérer le code depuis GitHub
+                git 'https://github.com/AnisAmmar1/Devops.git'
+            }
+        }
+
+
+    }
+}
