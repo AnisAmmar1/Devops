@@ -4,12 +4,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Checkout your source code from the repository.
-                checkout([
-                    $class: 'GitSCM',
-                    branches: [[name: '*/main']], // You can specify the branch you want to build here.
-                    userRemoteConfigs: [[url: 'https://github.com/AnisAmmar1/Devops.git']]
-                ])
+                // Étape pour récupérer le code depuis GitHub
+                git 'https://github.com/AnisAmmar1/Devops.git'
             }
         }
     }
