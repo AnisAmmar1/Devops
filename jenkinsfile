@@ -8,5 +8,19 @@ pipeline {
                 git 'https://github.com/AnisAmmar1/Devops.git'
             }
         }
+
+        stage('Build') {
+            steps {
+                // Étape pour construire le projet Spring
+                sh 'mvn clean package'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                // Étape pour déployer l'application (par exemple, sur un serveur Tomcat)
+                // Vous pouvez utiliser des scripts ou des plugins spécifiques ici
+            }
+        }
     }
 }
